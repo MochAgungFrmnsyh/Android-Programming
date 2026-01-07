@@ -22,9 +22,6 @@ fun KartuIdentitasMahasiswa() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(0xFFD7ECFF))
-            .padding(20.dp),
-        contentAlignment = Alignment.TopCenter
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
@@ -33,8 +30,8 @@ fun KartuIdentitasMahasiswa() {
                 painter = painterResource(id = R.drawable.foto_mahasiswa),
                 contentDescription = "Foto Mahasiswa",
                 modifier = Modifier
-                    .width(90.dp)
-                    .height(120.dp)
+                    .width(100.dp)
+                    .height(140.dp)
                     .background(Color.LightGray),
                 contentScale = ContentScale.Crop
             )
@@ -51,11 +48,10 @@ fun KartuIdentitasMahasiswa() {
             Spacer(modifier = Modifier.height(16.dp))
 
             Column(
-                verticalArrangement = Arrangement.spacedBy(6.dp),
                 horizontalAlignment = Alignment.Start,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 20.dp)
+                    .padding(horizontal = 10.dp)
             ) {
                 Row {
                     Text(
@@ -74,7 +70,9 @@ fun KartuIdentitasMahasiswa() {
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.width(100.dp)
                     )
-                    Text(text = "23010047")
+                    Text(text = "23010047",
+                        modifier = Modifier.width(100.dp))
+                    Text(text = "Kelas: A")
                 }
                 Row {
                     Text(
